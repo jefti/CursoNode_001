@@ -1,5 +1,8 @@
-var calc = require('./calculadora');
+var http = require('http');
 
-let a = 5
-let b = 10
-let result = calc.sum(a, b)
+let port = 8081
+http.createServer( function (req, res){
+    res.end("Welcome")
+}).listen(port)
+
+console.log(`Servidor rodando na porta ${port}`)
